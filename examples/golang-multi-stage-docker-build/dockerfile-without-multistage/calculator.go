@@ -9,7 +9,12 @@ import (
 )
 
 func main() {
-	fmt.Println("Hi Abhishek.Veeramalla, I am a calculator app ....")
+	user := os.Getenv("USER")
+if user == "" {
+    user = "User"
+}
+fmt.Printf("Hi %s, I am a calculator app ....\n", user)
+
 
 	for {
 		// Read input from the user
